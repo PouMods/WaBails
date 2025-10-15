@@ -105,7 +105,7 @@ await client.relayMessage(m.chat, {
     buttons: [
       {
         name: "cta_url",
-        buttonParamsJson: "{\"display_text\":\"7eppeli-Pdf\",\"url\":\"https://t.me/PouSkibudi\"}"
+        buttonParamsJson: "{\"display_text\":\"PouMods-Pdf\",\"url\":\"https://t.me/PouSkibudi\"}"
       }
     ],
     priceAmount1000: 72502,
