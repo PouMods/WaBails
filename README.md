@@ -1,116 +1,41 @@
-# Modified Whatsapp-API
-<p align='center'>
-  <img src="https://files.catbox.moe/rhm9rt.webp" width="172">
+# PouMods – Modified WhatsApp API
+
+<p align="center">
+  <img src="https://files.catbox.moe/d3miwt.jpg" width="180">
 </p>
 
---- 
-
-## Usage
-```json
-"depencies": {
-  "@whiskeysockets/baileys": "github:tenka-san/WaBails"
-}
-```
-## Import
-```javascript
-const {
-  default:makeWASocket,
-  // Other Options 
-} = require('@whiskeysockets/baileys');
-```
+<p align="center">
+  <b>Fork & Modifikasi Baileys WhatsApp API</b><br>
+  Stabil • Fleksibel • Cocok untuk Bot WhatsApp
+</p>
 
 ---
-# How To Connect To Whatsapp
-## With QR Code
-```javascript
-const {
-  default: makeWASocket
-} = require('@whiskeysockets/baileys');
 
-const client = makeWASocket({
-  browser: ['Ubuntu', 'Chrome', '20.00.1'],
-  printQRInTerminal: true
-})
-```
+## 📌 Tentang PouMods WaBails
 
-## Connect With Number
-```javascript
-const {
-  default: makeWASocket,
-  fetchLatestWAWebVersion
-} = require('@whiskeysockets/baileys');
+**PouMods WaBails** adalah hasil modifikasi dari  
+[`@whiskeysockets/baileys`](https://github.com/WhiskeySockets/Baileys)  
+yang dikembangkan ulang untuk kebutuhan eksplorasi fitur WhatsApp seperti:
 
-const client = makeWASocket({
-  browser: ['Ubuntu', 'Chrome', '20.00.1'],
-  printQRInTerminal: false,
-  version: fetchLatestWAWebVersion()
-  // Other options
-});
+- Login QR & Pairing Code
+- Support Custom Pairing
+- Support Type Message New
+- Relay Message Custom
+- Cocok untuk bot WhatsApp berbasis NodeJS
 
-const number = "628XXXXX";
-const code = await client.requestPairingCode(number.trim) /* Use : (number, "YYYYYYYY") for custom-pairing */
+Project ini ditujukan untuk **developer bot WhatsApp**,.
 
-console.log("Ur pairing code : " + code)
-```
+---
 
-# Sending messages
+## 📦 Instalasi
 
-## send orderMessage
-```javascript
-const fs = require('fs');
-const ZeppImg = fs.readFileSync('./ZeppImage');
+Tambahkan dependency berikut ke `package.json`:
 
-await client.sendMessage(m.chat, {
-  thumbnail: ZeppImg,
-  message: "Gotta get a grip",
-  orderTitle: "7eppeli-Corporation",
-  totalAmount1000: 72502,
-  totalCurrencyCode: "IDR"
-}, { quoted:m })
-```
-
-## send pollResultSnapshotMessage
-```javascript
-await client.sendMessage(m.chat, {
-  pollResultMessage: {
-    name: "7eppeli-Corporation",
-    options: [
-      {
-        optionName: "poll 1"
-      },
-      {
-        optionName: "poll 2"
-      }
-    ],
-    newsletter: {
-      newsletterName: "7eppeli | Killer Queen Information",
-      newsletterJid: "1@newsletter"
-    }
+```json
+{
+  "dependencies": {
+    "@whiskeysockets/baileys": "github:PouMods/WaBails"
   }
-})
-```
+}
 
-## send productMessage
-```javascript
-await client.relayMessage(m.chat, {
-  productMessage {
-    title: "7eppeli.pdf",
-    description: "zZZ...",
-    thumbnail: { url: "./ZeppImage" },
-    productId: "EXAMPLE_TOKEN",
-    retailerId: "EXAMPLE_RETAILER_ID",
-    url: "https://t.me/YuukeyD7eppeli",
-    body: "Nak Tido",
-    footer: "Footer",
-    buttons: [
-      {
-        name: "cta_url",
-        buttonParamsJson: "{\"display_text\":\"7eppeli-Pdf\",\"url\":\"https://t.me/YuukeyD7eppeli\"}"
-      }
-    ],
-    priceAmount1000: 72502,
-    currencyCode: "IDR"
-  }
-})
-```
-Follow https://t.me/TenkaWaBails kalau mau liat type message yg lain :v
+Follow https://t.me/postexplofunc untu informasi update :v
